@@ -1,33 +1,31 @@
-package Student;
+package com.student;
 
 import java.sql.*;
 
-public class UpdateStudent {
+public class JDBCStudent {
 	public static void main(String[] args) {
 		
 		try {
-			Class.forName("org.postgresql.Driver");	
+			Class.forName("org.postgresql.Driver");
 			
-			//Create a connection
 			String url = "jdbc:postgresql://localhost:5432/studentdatabase";
 			String username = "postgres";
 			String password = "root";
 			
-			Connection connection = DriverManager.getConnection(url,username,password);
+			Connection connection = DriverManager.getConnection(url, username, password);
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "update student set id = 1010 where name = 'Muskan';"; //Updated
+			String query = "create table student(name varchar(20) , age numeric(2) , id numeric(4) primary key);";
 			
-			statement.executeUpdate(que);
+			statement.execute(query);
 			
 			connection.close();
-		} 
-		catch (ClassNotFoundException e) {	
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 	}
-}
+
+}	

@@ -1,8 +1,8 @@
-package Student;
+package com.student;
 
 import java.sql.*;
 
-public class DeletingDataStudent {
+public class UpdateStudent {
 	public static void main(String[] args) {
 		
 		try {
@@ -17,7 +17,7 @@ public class DeletingDataStudent {
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "delete from student where name = 'Rahul';"; //deleted
+			String que = "update student set id = 1010 where name = 'Muskan';"; //Updated
 			
 			statement.executeUpdate(que);
 			

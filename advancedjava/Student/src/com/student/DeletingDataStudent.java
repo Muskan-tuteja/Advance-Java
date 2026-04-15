@@ -1,8 +1,8 @@
-package Student;
+package com.student;
 
 import java.sql.*;
 
-public class InsertingDataStudent {
+public class DeletingDataStudent {
 	public static void main(String[] args) {
 		
 		try {
@@ -17,13 +17,7 @@ public class InsertingDataStudent {
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "insert into student values('Rahul' ,22, 1001);";
-//			String que = "insert into student values('Priyanshu' ,22, 1002);";
-//			String que = "insert into student values('Anjali' ,24, 1003);";
-//			String que = "insert into student values('Sharik' ,23, 1004);";
-//			String que = "insert into student values('Amritanshu' ,24, 1005);";
-			
-//			  
+			String que = "delete from student where name = 'Rahul';"; //deleted
 			
 			statement.executeUpdate(que);
 			
