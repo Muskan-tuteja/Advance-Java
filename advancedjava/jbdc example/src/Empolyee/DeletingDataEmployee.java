@@ -1,15 +1,15 @@
-package BikeProject;
+package Empolyee;
 
 import java.sql.*;
 
-public class DeletingDataBike {
-public static void main(String[] args) {
+public class DeletingDataEmployee {
+	public static void main(String[] args) {
 		
 		try {
 			Class.forName("org.postgresql.Driver");	
 			
 			//Create a connection
-			String url = "jdbc:postgresql://localhost:5432/bikedatabase";
+			String url = "jdbc:postgresql://localhost:5432/employeedatabase";
 			String username = "postgres";
 			String password = "root";
 			
@@ -17,7 +17,7 @@ public static void main(String[] args) {
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "delete from bike where brand = 'TVS';"; //deleted
+			String que = "delete from employee where ename = 'Amit';"; //deleted
 			
 			statement.executeUpdate(que);
 			
@@ -30,5 +30,4 @@ public static void main(String[] args) {
 		}
 		
 	}
-
 }
