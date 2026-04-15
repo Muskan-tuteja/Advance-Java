@@ -16,11 +16,11 @@ public static void main(String[] args) {
 			
 			Statement statement = connection.createStatement();
 			
-//			String que = "insert into bike values('Hero' ,70000, 'Splendor');";
+			String que = "insert into bike values('Hero' ,70000, 'Splendor');";
 //			String que = "insert into bike values('TVS' ,90000, 'Apache');";  
 //			String que = "insert into bike values('Yamaha' ,100000, 'X100');";  
 //			String que = "insert into bike values('Honda' ,80000, 'Splendor+');";  
-			String que = "insert into bike values('Active' ,50000, '5G');";  
+//			String que = "insert into bike values('Active' ,50000, '5G');";  
 			
 			statement.executeUpdate(que);
 			
