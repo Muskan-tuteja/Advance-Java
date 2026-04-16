@@ -17,11 +17,12 @@ public class InsertingDataStudent {
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "insert into student values('Rahul' ,22, 1001);";
-//			String que = "insert into student values('Priyanshu' ,22, 1002);";
-//			String que = "insert into student values('Anjali' ,24, 1003);";
-//			String que = "insert into student values('Sharik' ,23, 1004);";
-//			String que = "insert into student values('Amritanshu' ,24, 1005);";
+			String que = "insert into student values('Riya', 21, 1002);";
+//			String que = "insert into student values('Rahul' ,22, 1001);";
+//			String que1 = "insert into student values('Priyanshu' ,22, 1002);";
+//			String que2 = "insert into student values('Anjali' ,24, 1003);";
+//			String que3 = "insert into student values('Sharik' ,23, 1004);";
+//			String que4 = "insert into student values('Amritanshu' ,24, 1005);";
 			
 //			  
 			

@@ -21,6 +21,7 @@ public class JDBCStudent {
 			statement.execute(query);
 			
 			connection.close();
+			
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

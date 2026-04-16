@@ -17,7 +17,7 @@ public class UpdateStudent {
 			
 			Statement statement = connection.createStatement();
 			
-			String que = "update student set id = 1010 where name = 'Muskan';"; //Updated
+			String que = "update student set id = 1010 where name = 'Riya';"; //Updated
 			
 			statement.executeUpdate(que);
 			
