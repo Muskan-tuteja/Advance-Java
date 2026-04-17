@@ -17,15 +17,9 @@ public static void main(String[] args) {
 			Statement statement = connection.createStatement();
 			
 			String que = "insert into teacher values('Ishu', 24, 10,400000);";
-			
-		
-
-			
-			  
-			
+				
+			  		
 			statement.executeUpdate(que);
-			
-
 			
 			connection.close();
 		} 
