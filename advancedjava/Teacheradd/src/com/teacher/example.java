@@ -2,8 +2,9 @@ package com.teacher;
 import java.sql.*;
 
 public class example {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         Connection connection = null;
+
         try {
             Class.forName("org.postgresql.Driver");
 
@@ -13,42 +14,36 @@ public class example {
 
             connection = DriverManager.getConnection(url, username, password);
 
-            int id = 10; // correct datatype
+            PreparedStatement ps = connection.prepareStatement(
+                    "INSERT INTO teacher VALUES (?, ?, ?)");
 
-//            PreparedStatement preparedStatement =
-//                    connection.prepareStatement("select * from student where id = ?");
-            PreparedStatement preparedStatement = connection.prepareStatement(
-                    "INSERT INTO student (id, name) VALUES (?, ?)");
-            preparedStatement.setInt(1, 1);
-            preparedStatement.setString(2, "isha");
-            preparedStatement.addBatch();
-            preparedStatement.executeBatch();
+            // First record
+            ps.setInt(1, 1);
+            ps.setString(2, "isha");
+            ps.setString(3, "math");
+            ps.addBatch();
+
+            // Second record
+            ps.setInt(1, 2);
+            ps.setString(2, "muskan");
+            ps.setString(3, "science");
+            ps.addBatch();
+
+            // Execute batch
+            ps.executeBatch();
 
             System.out.println("Batch executed successfully!");
 
-//            preparedStatement.setInt(1, id); // value set
-
-            ResultSet query = preparedStatement.executeQuery();
-
-            while (query.next()) {
-                System.out.println(query.getInt(1) + " || ");
-                System.out.println(query.getString(2));
-            }
-
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
 
         } finally {
             try {
                 if (connection != null)
                     connection.close();
-            } catch (SQLException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
-
 }
