@@ -8,7 +8,7 @@ public class Swap1 {
 		a=b;
 		b = temp;
 
-System.out.println("A" + a+ "" + "B"+b);
+System.out.println("A....." + a+ " " + "B......."+b);
 	}
 	
 
