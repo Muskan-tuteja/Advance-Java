@@ -23,8 +23,8 @@ public class strm {
 					.filter(n-> n%2!=0)
 					.toList();
 
-System.out.println(even);
-System.out.println(odd);
+System.out.println("Even :" + even);
+System.out.println("Odd :" + odd);
 }
 
 }
