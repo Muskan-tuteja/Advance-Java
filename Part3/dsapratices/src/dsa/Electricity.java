@@ -13,10 +13,13 @@ public class Electricity {
 			total = unit*2;
 			
 		}
+		else if(unit>=101 && unit<=300) {
+			total = unit*4;
+		}
 		else if(unit>=300) {
 			total=unit*6;
 		}
-		if(total>)
+		
 	}
 
 }
