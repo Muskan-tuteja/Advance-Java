@@ -1,5 +1,9 @@
 package threads;
-
+class UserThread extends Thread{
+	public void run() {
+		System.out.println("this is user defind thread");
+	}
+}
 public class ThreadOp {
 	public static void main(String[] args) {
 		
@@ -18,7 +22,10 @@ public class ThreadOp {
 		}catch(Exception e) {
 			
 		}
+		System.out.println(t.getId());
 		System.out.println("program ended..");
+		UserThread thread = new UserThread();
+		thread.start();
 	}
 
 }
