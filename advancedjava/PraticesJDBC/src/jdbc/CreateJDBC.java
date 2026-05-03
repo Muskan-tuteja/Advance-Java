@@ -1,7 +1,7 @@
 package jdbc;
 import java.sql.*;
 
-public class InsertJDBC {
+public class CreateJDBC {
 	public static void main(String[] args) {
 		try {
 			//load the Driver
