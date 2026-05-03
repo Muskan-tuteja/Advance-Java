@@ -1,5 +1,6 @@
 package jdbc;
 import java.sql.*;
+import java.io.*;
 
 public class insertjdbc {
 	public static void main(String[] args) {
@@ -15,9 +16,16 @@ public class insertjdbc {
 			String q = "insert into table1(tName,tCity) values(?,?)";
 //			get the preparedstatemet object
 			PreparedStatement pstmt = connection.prepareStatement(q);
+//			BufferedReader maltiple name and city add used this bufferedReader
+			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter name :");
+			String name=br.readLine();
+			
+			System.out.println("Enter city :");
+			String City = br.readLine();
 			//set the values to query
-			pstmt.setString(1, "Musus");
-			pstmt.setString(2, "Hansi");
+			pstmt.setString(1, name);
+			pstmt.setString(2, City);
 			pstmt.executeUpdate();
 			System.out.println("insert crated in database..");
 			connection.close();
