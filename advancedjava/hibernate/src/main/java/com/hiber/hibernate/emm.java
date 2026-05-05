@@ -1,4 +1,4 @@
-package com.hibernat;
+package com.hiber.hibernate;
 
 import java.time.LocalTime;
 
@@ -9,7 +9,8 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-@Entity
+@entity
+
 @Table(name = "user_table")
 public class emm {
 	@Id
@@ -26,6 +27,15 @@ public class emm {
 	
 	public int getId() {
 		return id;
+	}
+	public emm(int id, String name, String city, Long phone, double age, LocalTime time) {
+		super();
+		this.id = id;
+		this.name = name;
+		City = city;
+		this.phone = phone;
+		this.age = age;
+		this.time = time;
 	}
 	public LocalTime getTime() {
 		return time;
@@ -62,7 +72,7 @@ public class emm {
 	}
 	public emm() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

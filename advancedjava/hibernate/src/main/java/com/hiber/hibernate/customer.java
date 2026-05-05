@@ -1,4 +1,4 @@
-package com.hibernat;
+package com.hiber.hibernate;
 
 public class customer {
 

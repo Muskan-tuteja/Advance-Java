@@ -4,10 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
+
 public class Student {
 	@Id
 	private int id;
-	private String name;
+	private String name; 
 	private String city;
 	
 	public Student(int id, String name, String city) {
@@ -26,6 +27,7 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 	public String getName() {
 		return name;
 	}
@@ -37,6 +39,11 @@ public class Student {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	@Override
+	public String toString() {
+
+		return this.id+" : "+this.name+" :" +this.city;
 	}
 	
 
