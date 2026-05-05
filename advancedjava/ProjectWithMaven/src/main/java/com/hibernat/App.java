@@ -19,9 +19,9 @@ public class App
     System.out.println(factory.isClosed());
 //    creating student
     Student stu = new Student();
-    stu.setId(120);
-    stu.setName("MUSKAN");
-    stu.setCity("HISSAR");
+    stu.setId(112);
+    stu.setName("MUSKANf");
+    stu.setCity("HISSARr");
     System.out.println(stu);
     
 //    Session session=factory.getCurrentSession();
