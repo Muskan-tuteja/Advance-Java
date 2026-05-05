@@ -1,4 +1,4 @@
-package imagehibernate;
+package com.annotation;
 
 import java.sql.Date;
 
