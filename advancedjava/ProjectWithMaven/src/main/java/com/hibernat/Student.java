@@ -1,12 +1,15 @@
 package com.hibernat;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Student {
+	@Id
 	private int id;
 	private String name;
 	private String city;
+	
 	public Student(int id, String name, String city) {
 		super();
 		this.id = id;
@@ -15,7 +18,7 @@ public class Student {
 	}
 	public Student() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public int getId() {
 		return id;
