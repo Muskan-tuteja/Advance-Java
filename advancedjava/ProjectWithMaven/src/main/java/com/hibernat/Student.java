@@ -1,5 +1,7 @@
 package com.hibernat;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -10,6 +12,8 @@ public class Student {
 	private int id;
 	private String name; 
 	private String city;
+	
+	private Certificate certi;
 	
 	public Student(int id, String name, String city) {
 		super();
@@ -39,6 +43,13 @@ public class Student {
 	}
 	public void setCity(String city) {
 		this.city = city;
+	}
+	
+	public Certificate getCerti() {
+		return certi;
+	}
+	public void setCerti(Certificate certi) {
+		this.certi = certi;
 	}
 	@Override
 	public String toString() {
