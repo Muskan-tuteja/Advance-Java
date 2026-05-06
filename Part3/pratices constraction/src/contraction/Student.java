@@ -11,8 +11,8 @@ public class Student {
 	}
 	public Student(int id, String name,int age,String City) {
 		System.out.println("student parmeterid");
-//		this.age=age;
-//		this.City=City;
+		this.age=age;
+		this.City=City;
 		this.id=id;
 		this.name=name;
 		
