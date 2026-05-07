@@ -1,5 +1,8 @@
 package com.hibernat;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class Certificate {
 	private String course;
 	private String duration;
