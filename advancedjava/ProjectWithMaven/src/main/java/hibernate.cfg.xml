@@ -16,6 +16,8 @@
 	<mapping class="com.hibernat.Student" />
 	<mapping class="com.annotation.Address"/>
 	<mapping class="com.Fetch.FetchDemo"/>
+	<mapping class="com.onetoone.Question" />
+	<mapping  class="com.onetoone.Answer"/>
 	</session-factory>
 	
 	</hibernate-configuration>
