@@ -1,6 +1,6 @@
 package Abstration;
 
-public class Sparrow implements Interfacee {
+public class Sparrow implements interfacess {
 
 	@Override
     public void fly() {
