@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id="myBean" class="org.example.GreetingService">
+    <bean id="myBean" class="org.example.demo.GreetingService">
             </bean>
 
 </beans>

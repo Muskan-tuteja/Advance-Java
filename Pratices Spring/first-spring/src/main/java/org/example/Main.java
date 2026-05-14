@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.demo.GreetingService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
