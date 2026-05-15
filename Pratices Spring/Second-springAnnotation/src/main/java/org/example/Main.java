@@ -2,8 +2,10 @@ package org.example;
 
 import org.example.demo.GreetingService;
 import org.example.demo.NewAppConfig;
+import org.example.demo.lifeCycleBean;
 import org.example.looseCoupling.UserServices;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.Lifecycle;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -31,5 +33,21 @@ public class Main {
 //                context.getBean(UserServices.class);
 //
 //        userService1.notifyUser("Whay is Hello !!!");
-  }
+
+
+//   lifeCycle bean ................
+
+        System.out.println("staring spring application context");
+        ApplicationContext context
+             = new AnnotationConfigApplicationContext(NewAppConfig.class);
+        System.out.println("Retriving life cycle");
+        lifeCycleBean bean = context.getBean(lifeCycleBean.class);
+bean.perfromTask();
+        System.out.println("Closing application context");
+
+
+
+
+
+    }
 }
