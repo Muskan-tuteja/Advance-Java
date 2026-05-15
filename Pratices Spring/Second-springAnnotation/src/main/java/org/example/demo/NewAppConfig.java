@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan(basePackages = "org.example")
 public class NewAppConfig {
-@Autowired
-    @Bean(initMethod = "init",destroyMethod = "cleanup")
+
+//    @Bean(initMethod = "init",destroyMethod = "cleanup")
     public lifeCycleBean lifeCycleBean (@Qualifier("emailNotificationServices") NotificationServices notification){
 return new lifeCycleBean(notification);
     }
