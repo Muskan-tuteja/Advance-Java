@@ -1,8 +1,10 @@
 package org.example;
 
 import org.example.demo.GreetingService;
+import org.example.demo.NewAppConfig;
 import org.example.looseCoupling.UserServices;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -10,19 +12,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ApplicationContext context
-                = new ClassPathXmlApplicationContext("application.xml");
+                = new AnnotationConfigApplicationContext(NewAppConfig.class);
 GreetingService greetingService
         = (GreetingService) context.getBean("myBean");
 greetingService.send();
 
- UserServices userService=
-         (UserServices) context.getBean("UserServiceEmail");
-
- userService.notifyUser("Whay is Hello !!!");
-
-        UserServices userService1=
-                (UserServices) context.getBean("UserServiceSms");
-
-        userService1.notifyUser("Whay is Hello !!!");
+// UserServices userService=
+//         (UserServices) context.getBean("UserServiceEmail");
+//
+// userService.notifyUser("Whay is Hello !!!");
+//
+//        UserServices userService1=
+//                (UserServices) context.getBean("UserServiceSms");
+//
+//        userService1.notifyUser("Whay is Hello !!!");
     }
 }
