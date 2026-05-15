@@ -1,14 +1,21 @@
 package org.example.looseCoupling;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Component("UserServiceSms")
 
 public class UserServices {
     NotificationServices notification ;
 
-    public UserServices() {
-    }
+//    public UserServices() {
+//    }
+    @Autowired
 
-    public UserServices(NotificationServices notification) {
+    public UserServices(@Qualifier("smsNotificationServices") NotificationServices notification) {
         this.notification = notification;
     }
 

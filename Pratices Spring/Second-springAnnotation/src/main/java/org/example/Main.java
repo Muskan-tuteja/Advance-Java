@@ -11,20 +11,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+
+//        ApplicationContext context
+//                = new ClassPathXmlApplicationContext("applicationContext.xml");
+
         ApplicationContext context
                 = new AnnotationConfigApplicationContext(NewAppConfig.class);
 GreetingService greetingService
         = (GreetingService) context.getBean("myBean");
 greetingService.send();
 
-// UserServices userService=
-//         (UserServices) context.getBean("UserServiceEmail");
+ UserServices userService=
+         (UserServices) context.getBean("UserServiceEmail");
+
+ userService.notifyUser("Whay is Hello !!!");
 //
-// userService.notifyUser("Whay is Hello !!!");
-//
-//        UserServices userService1=
-//                (UserServices) context.getBean("UserServiceSms");
-//
-//        userService1.notifyUser("Whay is Hello !!!");
+        UserServices userService1=
+                (UserServices) context.getBean("UserServiceSms");
+
+        userService1.notifyUser("Whay is Hello !!!");
     }
 }
