@@ -15,20 +15,21 @@ public class Main {
 //        ApplicationContext context
 //                = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        ApplicationContext context
-                = new AnnotationConfigApplicationContext(NewAppConfig.class);
-GreetingService greetingService
-        = (GreetingService) context.getBean("myBean");
-greetingService.send();
-
- UserServices userService=
-         (UserServices) context.getBean("UserServiceEmail");
-
- userService.notifyUser("Whay is Hello !!!");
+//        ApplicationContext context
+//                = new AnnotationConfigApplicationContext(NewAppConfig.class);
+////
+//        GreetingService greetingService
+//                = context.getBean(GreetingService.class);
+//greetingService.send();
 //
-        UserServices userService1=
-                (UserServices) context.getBean("UserServiceSms");
-
-        userService1.notifyUser("Whay is Hello !!!");
-    }
+// UserServices userService=
+//         (UserServices) context.getBean("UserServiceEmail");
+//
+// userService.notifyUser("Whay is Hello !!!");
+//
+//        UserServices userService1=
+//                context.getBean(UserServices.class);
+//
+//        userService1.notifyUser("Whay is Hello !!!");
+  }
 }

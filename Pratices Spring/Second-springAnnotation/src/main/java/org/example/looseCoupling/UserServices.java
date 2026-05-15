@@ -9,16 +9,16 @@ import org.springframework.stereotype.Service;
 @Component("UserServiceSms")
 
 public class UserServices {
-    NotificationServices notification ;
+   public NotificationServices notification ;
 
 //    public UserServices() {
 //    }
     @Autowired
 
-    public UserServices(@Qualifier("smsNotificationServices") NotificationServices notification) {
+    public UserServices(
+            @Qualifier("smsNotificationServices") NotificationServices notification) {
         this.notification = notification;
     }
-
     public NotificationServices getNotification() {
         return notification;
     }
