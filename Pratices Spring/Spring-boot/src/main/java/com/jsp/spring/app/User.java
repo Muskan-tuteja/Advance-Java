@@ -1,4 +1,4 @@
-package com.jsp.spring;
+package com.jsp.spring.app;
 
 //POJO ===> Plain old java Objects
 public class User {
