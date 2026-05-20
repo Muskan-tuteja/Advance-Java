@@ -35,6 +35,7 @@ public class Main {
 //        userService1.notifyUser("Whay is Hello !!!");
 
 
+
 //   lifeCycle bean ................
 
         System.out.println("staring spring application context");

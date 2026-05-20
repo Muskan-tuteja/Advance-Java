@@ -19,7 +19,7 @@ public class HelloController {
     public User getUser(){
         User user = new User(1,"muskkan",34);
         User user2 = new User(2,"musu",31);
-        return user2;
+        return user;
 
     }
 }
