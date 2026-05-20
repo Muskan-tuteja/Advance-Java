@@ -114,9 +114,13 @@ public class User {
                               ps1.setString(1, name);
                               ps1.setInt(2, id1);
 
-                              ps1.executeUpdate();
+                              int rows1 = ps1.executeUpdate();
 
-                              System.out.println("Name Updated Successfully !");
+                              if(rows1 > 0) {
+                                  System.out.println("Name Updated Successfully !");
+                              } else {
+                                  System.out.println("User ID Not Found !");
+                              }
                               break;
 
                         case 2:
@@ -139,7 +143,13 @@ public class User {
 
                             ps2.executeUpdate();
 
-                            System.out.println("Email Updated Successfully !");
+                            int rows2 = ps2.executeUpdate();
+
+                            if(rows2 > 0) {
+                                System.out.println("Email Updated Successfully !");
+                            } else {
+                                System.out.println("User ID Not Found !");
+                            }
                             break;
 
                         case 3:
@@ -160,11 +170,14 @@ public class User {
                             ps3.setString(1, password1);
                             ps3.setInt(2, id3);
 
-                            ps3.executeUpdate();
+                            int rows3 = ps3.executeUpdate();
 
-                            System.out.println("Password Updated Successfully !");
+                            if(rows3 > 0) {
+                                System.out.println("Password Updated Successfully !");
+                            } else {
+                                System.out.println("User ID Not Found !");
+                            }
                             break;
-
                         default:
 
                             System.out.println("Invalid Choice");
@@ -198,9 +211,13 @@ public class User {
 
                     ps4.setInt(1, deleteId);
 
-                    ps4.executeUpdate();
+                    int rows4 = ps4.executeUpdate();
 
-                    System.out.println("Account Deleted Successfully !");
+                    if(rows4 > 0) {
+                        System.out.println("Account Deleted Successfully !");
+                    } else {
+                        System.out.println("User ID Not Found !");
+                    }
                     break;
 
                 // Exit
