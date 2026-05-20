@@ -98,24 +98,69 @@ public class User {
 
                         case 1:
 
-                            System.out.print("Enter New Name : ");
-                            name = sc.nextLine();
+                        	  System.out.print("Enter User ID : ");
+                              int id1 = sc.nextInt();
+                              sc.nextLine();
 
-                            System.out.println("Name Updated Successfully !");
-                            break;
+                              System.out.print("Enter New Name : ");
+                              name = sc.nextLine();
+
+                              String updateName =
+                              "update users set name=? where id=?";
+
+                              PreparedStatement ps1 =
+                              connection.prepareStatement(updateName);
+
+                              ps1.setString(1, name);
+                              ps1.setInt(2, id1);
+
+                              ps1.executeUpdate();
+
+                              System.out.println("Name Updated Successfully !");
+                              break;
 
                         case 2:
 
+                        	System.out.print("Enter User ID : ");
+                            int id2 = sc.nextInt();
+                            sc.nextLine();
+
                             System.out.print("Enter New Email : ");
                             email = sc.nextLine();
+
+                            String updateEmail =
+                            "update users set email=? where id=?";
+
+                            PreparedStatement ps2 =
+                            connection.prepareStatement(updateEmail);
+
+                            ps2.setString(1, email);
+                            ps2.setInt(2, id2);
+
+                            ps2.executeUpdate();
 
                             System.out.println("Email Updated Successfully !");
                             break;
 
                         case 3:
 
+                        	System.out.print("Enter User ID : ");
+                            int id3 = sc.nextInt();
+                            sc.nextLine();
+
                             System.out.print("Enter New Password : ");
                             password1 = sc.nextLine();
+
+                            String updatePassword =
+                            "update users set password=? where id=?";
+
+                            PreparedStatement ps3 =
+                            connection.prepareStatement(updatePassword);
+
+                            ps3.setString(1, password1);
+                            ps3.setInt(2, id3);
+
+                            ps3.executeUpdate();
 
                             System.out.println("Password Updated Successfully !");
                             break;
@@ -133,6 +178,27 @@ public class User {
                     name = "";
                     email = "";
                     password1 = "";
+                    
+                    String query1 = "deleted into users(name,email,password) values(?,?,?)";
+
+                    PreparedStatement ps1 = connection.prepareStatement(query1);
+
+                    ps1.setString(1, name);
+                    ps1.setString(2, email);
+                    ps1.setString(3, password1);
+
+                    System.out.print("Enter User ID Delete : ");
+                    int deleteId = sc.nextInt();
+
+                    String deleteQuery =
+                    "delete from users where id=?";
+
+                    PreparedStatement ps4 =
+                    connection.prepareStatement(deleteQuery);
+
+                    ps4.setInt(1, deleteId);
+
+                    ps4.executeUpdate();
 
                     System.out.println("Account Deleted Successfully !");
                     break;
