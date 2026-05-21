@@ -1,11 +1,13 @@
 package com.jsp.spring.app;
 
+
+
 //POJO ===> Plain old java Objects
 public class User {
+
     private int id;
     private String name;
-    private int age;
-
+    private Integer age;
 
     public int getId() {
         return id;
