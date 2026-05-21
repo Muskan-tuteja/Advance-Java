@@ -1,0 +1,6 @@
+$kind: http-request
+url: http://localhost:8080/user/103
+method: DELETE
+auth:
+  type: noauth
+order: 3000

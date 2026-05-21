@@ -1,0 +1,17 @@
+$kind: http-request
+url: http://localhost:8080/user
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\":\"Muskan\",\r
+
+    \  \"age\":22,\r
+
+    \  \"address\":\"Delhi\",\r
+
+    \  \"phone\":9876543210\r
+
+    }"
+order: 1000

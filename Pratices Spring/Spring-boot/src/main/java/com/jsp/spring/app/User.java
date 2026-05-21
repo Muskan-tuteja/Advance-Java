@@ -8,6 +8,7 @@ public class User {
     private int id;
     private String name;
     private Integer age;
+    private String email;
 
     public int getId() {
         return id;
@@ -33,9 +34,22 @@ public class User {
         this.age = age;
     }
 
-    public User(int id, String name, int age) {
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
+    public User(int id, String name, int age , String email) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.email = email;
     }
 }

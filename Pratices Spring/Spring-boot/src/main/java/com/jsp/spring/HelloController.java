@@ -17,8 +17,8 @@ public class HelloController {
     @GetMapping("/user")
 //    @RequestMapping(value = "/users", method = RequestMethod.GET)
     public User getUser(){
-        User user = new User(1,"muskkan",34);
-        User user2 = new User(2,"musu",31);
+        User user = new User(1,"muskkan",34, "udgsyy@jsdbshj");
+//        User user2 = new User(2,"musu",31);
         return user;
 
     }

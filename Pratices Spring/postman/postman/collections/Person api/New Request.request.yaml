@@ -1,0 +1,20 @@
+$kind: http-request
+url: http://localhost:8080/api/person?rol=20&
+method: POST
+queryParams:
+  rol: "20"
+  "": null
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"muskan\",\r
+
+    \    \"age\": \"45\",\r
+
+    \    \"address\": \"Delhi\",\r
+
+    \    \"phone\": \"345678976\"\r
+
+    }"
+order: 1000

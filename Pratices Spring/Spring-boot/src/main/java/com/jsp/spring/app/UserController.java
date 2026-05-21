@@ -50,11 +50,52 @@ public ResponseEntity<User> createUser(@RequestBody User user){
 
 
 }
-@GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable int id){
+// /user/100, /user/400
+@GetMapping("/{userid}")
+    public ResponseEntity<User> getUser(
+            @PathVariable(value = "userid",required = false) int id){
     if(!userDb.containsKey(id))
         return ResponseEntity.status((HttpStatus.NOT_FOUND)).build();
     return  ResponseEntity.ok(userDb.get(id));
 }
+// multiple path access---> yes multiple path access
+    @GetMapping("/{userid}/order/{orderId}")
+    public ResponseEntity<User> getUser(
+            @PathVariable("userid") int id,
+            @PathVariable int orderId){
+        System.out.println("Order id "+orderId);
+        if(!userDb.containsKey(id))
+            return ResponseEntity.status((HttpStatus.NOT_FOUND)).build();
+        return  ResponseEntity.ok(userDb.get(id));
+    }
+
+// / search?name=muskan
+//    @RequestParam
+    @GetMapping("/search")
+    public ResponseEntity<List<User>> searchUsers(
+            @RequestParam (required = false,defaultValue = "mahi") String name,
+            @RequestParam (required = false,defaultValue = "ef@sdsfw") String email
+    ){
+        System.out.println(name);
+        List<User> users= userDb.values().stream()
+                .filter(user -> user.getName().equalsIgnoreCase(name))
+                .filter(user -> user.getEmail().equalsIgnoreCase(email))
+                .toList();
+
+        return ResponseEntity.ok(users);
+    }
+
+    //RequestHeader
+    @GetMapping("/info/{id}")
+    public String getInfo(
+            @PathVariable int id,
+            @RequestParam String name,
+            @RequestHeader ("User-Agent") String userAgent){
+    return  "UserAgent : " + userAgent
+            + " : " + id
+            + " : " + name;
+
+    }
+
 
 }

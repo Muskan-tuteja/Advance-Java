@@ -1,0 +1,14 @@
+workspace:
+  id: 427a9a4b-f639-4d66-854c-8da2bddde690
+localResources:
+  collections:
+    - ../postman/collections/Emplyeeapi
+    - ../postman/collections/My Collection
+    - ../postman/collections/Person api
+    - ../postman/collections/spring boot api
+cloudResources:
+  collections:
+    ../postman/collections/Emplyeeapi: 54907281-296126c4-a718-4be9-a728-5e60a20f1774
+    ../postman/collections/My Collection: 54907281-b804b252-e6af-4582-bf75-c13f66c9866c
+    ../postman/collections/Person api: 54907281-ced9539f-ca15-4516-bfe0-7929d67253f0
+    ../postman/collections/spring boot api: 54907281-c252f55a-3af0-4555-b63b-cf934c20c2e0

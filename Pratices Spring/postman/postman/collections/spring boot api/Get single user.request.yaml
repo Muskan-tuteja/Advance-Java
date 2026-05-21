@@ -1,0 +1,4 @@
+$kind: http-request
+url: Get single user
+method: GET
+order: 5000
