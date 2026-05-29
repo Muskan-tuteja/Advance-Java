@@ -7,26 +7,26 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class UserClassSpringBoot {
+public class UserClassHibernate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
     // ✅ Default constructor
-    public UserClassSpringBoot() {
+    public UserClassHibernate() {
 
     }
 
 
 
-    public UserClassSpringBoot(Long id, String name) {
+    public UserClassHibernate(Long id, String name) {
         this.id = id;
         this.name = name;
 
 
     }
-    public UserClassSpringBoot(String name) {
+    public UserClassHibernate(String name) {
         this.name = name;
     }
 
