@@ -10,11 +10,12 @@ public class ListDemo {
 		user.add(234);
 		user.add(67.998);
 		user.add("A");
-		System.out.println("All Users");
+//		System.out.println("All Users");
+		System.out.println(user);
 		
-		for(Object users : user) {
-			System.out.println(users);
-		}
+//		for(Object users : user) {
+//			System.out.println(users);
+//		}
 		
 	}
 
