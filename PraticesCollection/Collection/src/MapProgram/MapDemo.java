@@ -12,6 +12,8 @@ public class MapDemo {
 		
 		System.out.println(users);
 		System.out.println(users.get(2));
+		System.out.println("All user");
+		
 	}
 
 }
