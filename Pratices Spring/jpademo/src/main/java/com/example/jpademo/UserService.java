@@ -3,6 +3,8 @@ package com.example.jpademo;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -12,5 +14,10 @@ public class UserService {
     }
     public UserClassSpringBoot createUser(UserClassSpringBoot user) {
         return  userRespository.save(user);
+    }
+
+    public List<UserClassSpringBoot> getAllUsers() {
+
+        return userRespository.findAll();
     }
 }
